@@ -1,0 +1,114 @@
+/* أسلوب عام - تصميم غامق احترافي */
+:root{
+  --bg:#0f1113;
+  --card:#151617;
+  --muted:#b8c1c8;
+  --accent:#00e0a3;
+  --accent-2:#00c3ff;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+  background:linear-gradient(180deg,var(--bg),#0b0c0d);
+  color:var(--muted);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+}
+
+/* حاوية مركزية */
+.container{
+  width:95%;
+  max-width:1000px;
+  margin:0 auto;
+  padding:20px 0;
+}
+
+/* الهيدر */
+.site-header{
+  background:rgba(255,255,255,0.02);
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.site-header .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand{
+  font-weight:700;
+  color:var(--accent);
+  font-size:22px;
+}
+.nav{display:flex;gap:10px;align-items:center}
+.nav-link{
+  color:var(--muted);
+  text-decoration:none;
+  padding:10px 12px;
+  border-radius:8px;
+  transition:all .15s ease;
+}
+.nav-link:hover{background:rgba(255,255,255,0.02); color:var(--accent-2)}
+.nav-link.active{background:linear-gradient(90deg,rgba(0,224,163,0.06),rgba(0,195,255,0.03)); color:var(--accent)}
+
+/* الهيرو */
+.hero{
+  text-align:center;
+  padding:60px 10px;
+}
+.hero h1{font-size:34px;color:white;margin-bottom:8px}
+.lead{color:var(--muted);font-size:18px;margin-bottom:20px}
+
+/* بطاقات الخدمات */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:20px}
+.card{
+  background:var(--card);
+  padding:18px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.5);
+  border:1px solid rgba(255,255,255,0.02);
+}
+.card h3{color:white;margin-top:0}
+.card p{color:var(--muted)}
+
+/* زر النداء */
+.cta{
+  display:inline-block;
+  margin-top:24px;
+  padding:12px 22px;
+  border-radius:10px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:#001;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* المحتوى العام */
+.content{padding:40px 0}
+.content h1{color:white}
+.content h2{color:var(--accent);margin-top:10px}
+
+/* صفحة التواصل */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
+.contact-form{background:var(--card);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+.contact-form label{display:block;margin:8px 0 6px;color:var(--muted);font-weight:600}
+.contact-form input, .contact-form textarea{
+  width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:#0b0b0b;color:var(--muted)
+}
+.btn{display:inline-block;background:var(--accent);color:#001;border:none;padding:10px 16px;border-radius:8px;cursor:pointer;margin-top:10px;font-weight:700}
+.contact-info{background:var(--card);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.02);padding:18px 0;margin-top:40px;text-align:center;color:var(--muted);font-size:14px}
+
+/* استجابة لشاشات صغيرة */
+@media (max-width:800px){
+  .contact-grid{grid-template-columns:1fr}
+  .site-header .container{flex-direction:column;gap:10px;align-items:flex-start}
+  .nav{flex-wrap:wrap}
+  .hero h1{font-size:28px}
+}

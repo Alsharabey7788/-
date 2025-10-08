@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>رآصد - تواصل معنا</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">رآصد</div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="about.html" class="nav-link">من نحن</a>
+        <a href="contact.html" class="nav-link active">تواصل معنا</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <h1>تواصل معنا</h1>
+    <p class="lead">يسعدنا تواصلكم. املأ النموذج أدناه أو استخدم بيانات الاتصال المباشرة.</p>
+
+    <div class="contact-grid">
+      <form id="contactForm" class="contact-form" onsubmit="submitForm(event)">
+        <label>الاسم</label>
+        <input type="text" name="name" required placeholder="اسمك الكامل">
+
+        <label>البريد الإلكتروني</label>
+        <input type="email" name="email" required placeholder="email@domain.com">
+
+        <label>رقم الهاتف</label>
+        <input type="tel" name="phone" placeholder="مثال: 009677xxxxxxxx">
+
+        <label>الرسالة</label>
+        <textarea name="message" rows="6" required placeholder="اكتب رسالتك هنا..."></textarea>
+
+        <button type="submit" class="btn">إرسال الرسالة</button>
+      </form>
+
+      <div class="contact-info">
+        <h3>معلومات الاتصال</h3>
+        <p>البريد الإلكتروني: <a href="mailto:info@raasid.example">info@raasid.example</a></p>
+        <p>الهاتف: <a href="tel:+967000000000">+967 000 000 000</a></p>
+        <h4>العنوان</h4>
+        <p>صنعاء، اليمن</p>
+      </div>
+    </div>
+
+    <p class="note">ملاحظة: النموذج هنا تجريبي — لتعطيل المخاطر الفعلية تحتاج ربط للباك إند.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year3"></span> رآصد - جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
